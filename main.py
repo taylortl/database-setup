@@ -1,5 +1,5 @@
-from create_tables import create_tables
-from manipulate_mysql import create_connection, execute_query 
+from utils.create_tables import create_tables
+from utils.manipulate_mysql import create_connection, execute_query 
 import os
 from dotenv import load_dotenv
 
