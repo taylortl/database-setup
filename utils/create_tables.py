@@ -22,9 +22,9 @@ def create_tables(connection):
     create_question_choices_table = """
     create table question_choices (
         id int auto_increment,
-        choice varchar(10000), 
+        choice varchar(10000) not null, 
         is_answer enum('0','1') not null, 
-        question_id int ,
+        question_id int not null,
         primary key(id),
         foreign key(question_id) 
             references questions(id) 
@@ -34,9 +34,9 @@ def create_tables(connection):
 
     create_user_answers_table = """
     create table user_answers (
-        user_id int ,
-        question_id int ,
-        choice_id int ,
+        user_id int not null,
+        question_id int,
+        choice_id int,
         is_correct enum('0','1') not null,
         foreign key(user_id) references users(id) on delete cascade,
         foreign key(question_id) references questions(id) on delete set null,
