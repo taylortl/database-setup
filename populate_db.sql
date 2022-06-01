@@ -1,6 +1,5 @@
 use quiz_app;
 
-use sql_intro;
 describe question_choices;
 describe questions;
 describe users;
