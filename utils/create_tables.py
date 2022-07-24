@@ -1,4 +1,4 @@
-from manipulate_mysql import execute_query
+from utils.manipulate_mysql import execute_query
 
 def create_tables(connection):
     create_user_table = """

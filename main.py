@@ -16,5 +16,5 @@ if __name__ == '__main__':
     connection = create_connection("localhost", "root", pw)
     connection = create_connection("localhost", "root", pw, db)
      
-    # create_db(connection, db) # uncomment to create database
-    # create_tables(connection) # uncomment to create tables inside db
+    create_db(connection, db) # uncomment to create database
+    create_tables(connection) # uncomment to create tables inside db

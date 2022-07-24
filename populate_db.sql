@@ -1,10 +1,26 @@
+create database quiz_app;
 use quiz_app;
+show databases;
+show tables;
 
-use sql_intro;
+select count(*) from users;
+select * from questions;
+
 describe question_choices;
 describe questions;
 describe users;
 describe user_answers;
+
+
+select * from user_answers;
+insert into users (username)
+values("Taylor");
+
+insert into user_answers (user_id, question_id, choice_id)
+values(1, 1, 1);
+
+update user_answers set is_correct = (select is_answer from question_choices where question_id = 1 and id = 1)
+where user_id = 1 and question_id = 1 and choice_id = 1;
 
 select * from questions;
 delete from questions where id = 15;
@@ -141,4 +157,6 @@ values("Kinetic -> Sound", "1", 18),
 ("Kinetic -> Heat", "0", 18),
 ("Potential + Kinetic -> Sound", "0", 18),
 ("Kinetic + Heat -> Sound", "0", 18);
+
+
 
